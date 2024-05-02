@@ -3,7 +3,7 @@ The UI/UX designed by using the Tool Figma
 In Frontend used React,Redux-saga ,Material-ui
 In Backend used Nodejs,Expressjs
 DataBase-MongoDB
-Payment Gateway-Rajorpay
+Payment Gateway-Razorpay
 Video call Gateway- Tiwlio
 For Mail Facilities used Nodemailer
 
@@ -14,7 +14,7 @@ For Running Frontend ->
 
 For Running backend->
 1) Create a mongodb database url 
-2) create Rajorpay account and get the api keys
+2) create Razorpay account and get the api keys
 3) for twilio again create account and get the apis for video calling
 4) create .env file and paste these environment variables 
     PORT=3003
