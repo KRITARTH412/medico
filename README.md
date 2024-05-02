@@ -30,3 +30,5 @@ For Running backend->
     TWILIO_API_KEY_SECRET=
 5) npm install
 6) nodemon server.js
+
+Now go to Browser and open url http://localhost:3000
