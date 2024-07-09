@@ -35,7 +35,7 @@ export default function Header() {
     setDrawerOpen(open);
   };
 
-  const menuItems = ['Home', 'Aboutus', 'Services'];
+  const menuItems = ['Home', 'Aboutus', 'Services','video'];
 
   return (
     <>

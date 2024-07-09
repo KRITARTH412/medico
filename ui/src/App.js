@@ -16,6 +16,8 @@ import RazorpayForm from './components/payments/RazorpayForm';
 import DoctorDepartment from './components/Doctor/DoctorDepartments';
 import DoctorCalenderForm from './components/Admin/DoctorCalendarForm';
 import VideoChat from './components/VideoChat';
+import { Home } from './components/VideoCall/Home.jsx'
+import Roompage from './components/VideoCall/Roompage.jsx'
 
 function App() {
   const [token, setToken] = useState('');
@@ -56,6 +58,8 @@ function App() {
           <Route path="/userform" element={<UserForm />} />
           <Route path="/razorpay" element={<RazorpayForm />} />
           <Route path="/doctordepartment" element={<DoctorDepartment />} />
+          <Route path="/video" element={<Home/>}/>
+          <Route path="/room/:roomId" element={<Roompage/>}/>
           <Route path="/doctorcalenderform" element={<DoctorCalenderForm />} />
           <Route path="/videochat" element={<VideoChat token={token} />} />
         </Routes>

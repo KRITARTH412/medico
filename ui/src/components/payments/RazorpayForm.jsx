@@ -20,6 +20,7 @@ const RazorpayForm = () => {
       // Initialize Razorpay with the received order details
       const options = {
         key: 'rzp_test_wFpAIwV4qHAPQk',
+        key_secret: 'VmAlVdK4bEm83dLFpoWI5jJQ',
         amount: data.amount,
         currency: data.currency,
         name: 'Medico',
@@ -27,13 +28,16 @@ const RazorpayForm = () => {
         image: 'https://cdn.dribbble.com/users/612336/screenshots/2806600/concept_set1_small-14.png',
         order_id: data.id,
         handler: function(response) {
-          // Callback function after successful payment
           console.log(response);
         },
       };
 
-      const rzp = new window.Razorpay(options);
-      rzp.open();
+      if (window.Razorpay) {
+        const rzp = new window.Razorpay(options);
+        rzp.open();
+      } else {
+        console.error('Razorpay SDK not available');
+      }
     } catch (error) {
       console.error('Error initializing payment:', error);
     }
