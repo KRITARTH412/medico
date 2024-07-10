@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -24,23 +24,18 @@ export default function Header() {
   };
 
   const toggleDrawer = (open) => (event) => {
-    if (
-      event &&
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
-    ) {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
     setDrawerOpen(open);
   };
 
-  const menuItems = ['Home', 'Aboutus', 'Services','video'];
+  const menuItems = ['Home', 'Aboutus', 'Services', 'video'];
 
   return (
     <>
       <Box sx={{ flexGrow: 1, width: '100%' }}>
-        <AppBar position="static" sx={{ backgroundColor: 'white', color: '#10217D' }}>
+        <AppBar position="fixed" sx={{ backgroundColor: 'white', color: '#10217D' }}>
           <Toolbar>
             <Typography
               variant="h6"
@@ -122,7 +117,8 @@ export default function Header() {
           </List>
         </Drawer>
       </Box>
-      <Box sx={{ padding: '10px' }}>
+      <Box sx={{ padding: '10px', marginTop: '64px' }}>
+        {/* Content of the page goes here */}
       </Box>
     </>
   );
